@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Character from './character'
-
-
-
-
 
 const Characters = ({chars}) => {
     return (
-        <div>
-            <div className = 'characters'>
+        <div className = 'characters-container'>
                 {chars.map((char, index) => 
                     <Character charObj ={char} key ={index}/>
                     )}
-            </div>
         </div>
     );
 };

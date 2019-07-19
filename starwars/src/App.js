@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
 import axios from 'axios'
-import Characters from './components/chararcters-component';
+import Characters from './components/characters-component';
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   useEffect(() => {
-    axios.get('https://swapi.co/api/people/')
+    axios.get('https://henry-mock-swapi.herokuapp.com/api')
     .then( response =>{
       const axCharArr = response.data.results
       setCharsArr(axCharArr)
